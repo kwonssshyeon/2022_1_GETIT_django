@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Post
-from django.views.generic import ListView
+from django.views.generic import ListView,DetailView
 
 # Create your views here.
 #def index(request):
@@ -17,6 +17,11 @@ from django.views.generic import ListView
 class PostList(ListView):
     model =Post
     ordering='-pk'
+
+class PostDetail(DetailView):
+    model=Post
+
+
 
 
 # Post.object.get에 pk대입 ->같은 값을 가져오는 의미 값이 html에 렌더링
