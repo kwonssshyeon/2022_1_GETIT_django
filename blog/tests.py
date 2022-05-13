@@ -5,7 +5,7 @@ from .models import Post
 class TestView(TestCase):
     def setUp(self):
         self.client = Client()
-        
+  
     def navbar_test(self, soup):
         navbar = soup.nav
         self.assertIn('Blog', navbar.text)
